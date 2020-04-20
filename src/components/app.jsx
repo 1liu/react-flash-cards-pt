@@ -42,7 +42,7 @@ class App extends React.Component {
 
   addCard(newCard) {
     const newCards = this.state.cards.concat(newCard);
-    this.setState({ cards: newCards }, this.saveCards());
+    this.setState(() =>({cards:newCards})), this.saveCards());
   }
 
   render() {
