@@ -30,7 +30,7 @@ class App extends React.Component {
       case 'review-cards':
         return <ReviewCards />;
       case 'view-cards':
-        return <ViewCards />;
+        return <ViewCards cards={this.state.cards}/>;
       default:
         return null;
     }
@@ -42,7 +42,9 @@ class App extends React.Component {
 
   addCard(newCard) {
     const newCards = this.state.cards.concat(newCard);
-    this.setState(() => ({ cards: newCards }), this.saveCards());
+
+    this.setState(() => ({ cards: newCards }), this.saveCards);
+
   }
 
   render() {
