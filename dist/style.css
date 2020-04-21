@@ -45,7 +45,8 @@ h1 {
 h5 {
   color: rgb(155, 157, 163);
 }
-.container{
+
+.container {
   position: relative;
 }
 
@@ -53,7 +54,7 @@ h5 {
   color: black;
   position: absolute;
   font-size: 5rem;
-  top: 5%;
+  top: 50%;
   transform: translate(0%, -50%);
 }
 
@@ -63,4 +64,13 @@ h5 {
 
 #right {
   right: 15%;
+}
+
+.modal {
+  position: absolute;
+  height: 300px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

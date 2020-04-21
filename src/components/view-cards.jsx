@@ -1,6 +1,18 @@
 import React from 'react';
-
+import Card from './card';
 export default class ViewCards extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hidden: true,
+      index: 0
+    };
+    this.onDelete = this.onDelete.bind(this);
+  }
+
+  onDelete(index) {
+    this.props.onDelete(index);
+  }
 
   render() {
     return (
@@ -8,23 +20,9 @@ export default class ViewCards extends React.Component {
         <h1>My Cards</h1>
         <div className="row row-cols-1 row-cols-md-3">
           {
-            this.props.cards.map(card => {
+            this.props.cards.map((card, index) => {
               return (
-                <div key={card.question} className="col mb-4">
-                  <div className="card">
-                    <div className="card-body">
-                      <div className="question">
-                        <h5 className="card-title">Question:</h5>
-                        <p className="card-title">{card.question}</p>
-                      </div>
-                      <div className="answer">
-                        <h5 className="card-text">Answer:</h5>
-                        <p className="card-text">{card.answer}</p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
+                <Card key={index} index={index} card={card} onDelete={this.onDelete}/>
               );
             })
           }
