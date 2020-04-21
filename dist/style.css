@@ -24,13 +24,43 @@ nav>div:hover {
   background-color: rgb(108, 117, 125);
 }
 
-.card-body p{
+.card-body p {
   margin-bottom: 0 !important;
   color: white;
 }
-h1{
+
+.review-card {
+  width: 75%;
+  height: 300px;
+  background-color: rgb(71, 75, 82);
+  color: white;
+  font-size: 2rem;
   text-align: center;
 }
-h5{
+
+h1 {
+  text-align: center;
+}
+
+h5 {
   color: rgb(155, 157, 163);
+}
+.container{
+  position: relative;
+}
+
+#left, #right {
+  color: black;
+  position: absolute;
+  font-size: 5rem;
+  top: 5%;
+  transform: translate(0%, -50%);
+}
+
+#left {
+  left: 15%;
+}
+
+#right {
+  right: 15%;
 }
